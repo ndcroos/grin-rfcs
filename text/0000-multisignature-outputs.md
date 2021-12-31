@@ -93,7 +93,7 @@ The `multisig_key_id` is a unique identifier for the multisig output, and is der
 
 To accurately build, select, and spend a multisignature output, it is necessary to derive and communicate a multisignature key ID.
 
-To derive the multsig key id during multsig transaction building, each party hashes a domain separation string, the Slate ID, and transaction amount. Since the Slate ID is a UUID (universal *unique* identifier), each multisignature key ID should also be unique. The hash used is Blake2b for its ability to output 16-byte hashes, and use other places in the Grin implementation.
+To derive the multisig key id during multsig transaction building, each party hashes a domain separation string, the Slate ID, and transaction amount. Since the Slate ID is a UUID (universal *unique* identifier), each multisignature key ID should also be unique. The hash used is Blake2b for its ability to output 16-byte hashes, and use other places in the Grin implementation.
 
 The derivation function:
 
@@ -134,9 +134,9 @@ SHA3-256 is used for its security, 32-byte output, and use in other parts of the
 
 ### Multiparty bulletproofs
 
-In this section, building multiparty bulletproofs is described. The process requires mutliple communication rounds to exchange the partial keys used for constructing the final proof.
+In this section, building multiparty bulletproofs is described. The process requires multiple communication rounds to exchange the partial keys used for constructing the final proof.
 
-The protocol follows the specification originally proposed in the bulletproofs white paper by Buenz et al. [\[1\]](#references) (Ss. 4.5 "A Simple MPC Protocol for Bulletproofs"), and the implementation in the Grin fork of `secp256k1-zkp` [\[2\]](#references).
+The protocol follows the specification originally proposed in the bulletproofs white paper by Bünz et al. [\[1\]](#references) (Ss. 4.5 "A Simple MPC Protocol for Bulletproofs"), and the implementation in the Grin fork of `secp256k1-zkp` [\[2\]](#references).
 
 #### init_send_tx
 
